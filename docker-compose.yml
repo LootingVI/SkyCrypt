@@ -19,7 +19,7 @@ services:
   mongo:
     image: mongo:latest
     expose:
-      - "27017"
+      - "27012"
     environment:
       MONGO_INITDB_DATABASE: sbstats
     volumes:
@@ -43,7 +43,7 @@ services:
   nginx:
     image: nginx:alpine
     ports:
-      - "80:80"
+      - "83:83"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     container_name: sc_nginx
